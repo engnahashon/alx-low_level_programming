@@ -7,10 +7,10 @@
  * Returen: Abs value
  */
 int _abs(int c)
-{
+{	
+	if (c < 0) {
 	int value;
-	
-	if (c < 0)
 	value = c * -1;
-	return (value);
+	return (value); }
+	return (c);
 }
