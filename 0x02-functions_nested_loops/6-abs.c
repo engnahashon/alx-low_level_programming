@@ -4,12 +4,14 @@
  *
  * @c: Integer to be computed
  *
- * Returen: Abs value
+ * Return: Abs value
  */
 int _abs(int c)
-{	
-	if (c < 0) {
+{
+	if (c < 0)
+	{
 	int value;
+
 	value = c * -1;
 	return (value); }
 	return (c);
