@@ -12,7 +12,7 @@ void times_table(void)
 	{
 		for (b = 0; b < 10; b++)
 		{
-			printf("%d, ", a * b);
+			printf("%d,\t", a * b);
 		}
 		printf("\n");
 	}	
