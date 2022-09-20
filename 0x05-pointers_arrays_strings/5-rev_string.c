@@ -6,9 +6,8 @@
 void rev_string(char *s)
 {
 	int i = 0, len;
-	char tmp[];
+	char tmp[500];
 
-	{
 	while (*(s + i))
 		len++;
 	for (i = len -1; i >= 0; i--)
