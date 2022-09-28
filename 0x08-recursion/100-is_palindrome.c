@@ -25,11 +25,11 @@ int test_palindrome(char *str, int i, int j)
 int _strlen_recursion(char *s)
 {
 	if (*s != '\0')
-		return(1 + _strlen_recursion(s + 1));
+		return (1 + _strlen_recursion(s + 1));
 	return (0);
 }
 /**
-  * returns 1 if a string is a palindrome and 0 if not.
+  * is_palindrome - returns 1 if a string is a palindrome and 0 if not.
   * @s: string
   *
   * Return: 1 if palidrome zero otherwise
