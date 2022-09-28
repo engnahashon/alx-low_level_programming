@@ -20,7 +20,8 @@ int test_prime(int pr, int a)
 }
 
 /**
-  * is_prime_number - returns 1 if the input integer is a prime number, otherwise return 0
+  * is_prime_number - returns 1 if the input integer is a prime number,
+  * otherwise return 0
   * @n: number to be checked
   *
   * Return: 1 if prime num, 0 otherwise
