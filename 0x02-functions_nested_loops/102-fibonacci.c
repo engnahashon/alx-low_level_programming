@@ -7,6 +7,7 @@
 int main(void)
 {
 	fibonacci_50();
+	printf("\n");
 	return (0);
 }
 /**
