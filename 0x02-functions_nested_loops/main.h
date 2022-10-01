@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
+int fibonacci_sum_even(void);
 int fibonacci_50(void);
 void multiples(void);
 void print_times_table(int n);
