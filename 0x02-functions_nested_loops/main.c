@@ -7,13 +7,9 @@
 int main(void)
 
 {
-	int  n = 1, i;
-	
-	for (i = 0; i < 15; i++)
-	{
-	_putchar(n + '1');
+	int  n = 635;
+	_putchar((n%100)%10 + '0');	
 	_putchar('\n');
-	n = n  + 1;
-	}
+	
 	return (0);
 }
