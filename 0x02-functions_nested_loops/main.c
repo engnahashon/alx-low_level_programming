@@ -7,9 +7,6 @@
 int main(void)
 
 {
-	int  n = 635;
-	_putchar((n%100)%10 + '0');	
-	_putchar('\n');
-	
+	multiples();	
 	return (0);
 }
