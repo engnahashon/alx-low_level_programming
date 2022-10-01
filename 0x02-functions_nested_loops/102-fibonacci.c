@@ -18,12 +18,12 @@ int fibonacci_50(void)
 {
 	int i, prv = 1, cur = 2, hold ;
 	
-	printf("%d %d", prv, cur);
+	printf("%d, %d", prv, cur);
 	for (i = 1; i <= 48; i++)
 	{
 		hold = cur;
 		cur = cur + prv;
-		printf(" %d", cur);
+		printf(", %d", cur);
 		prv = hold;
 	}
 	return (0);
