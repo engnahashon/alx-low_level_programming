@@ -16,14 +16,15 @@ int main(void)
   */
 int fibonacci_50(void)
 {
-	int i, prv = 1, cur = 2, hold ;
-	
-	printf("%d, %d", prv, cur);
+	long prv = 1, cur = 2, hold;
+	int i;
+
+	printf("%ld, %ld", prv, cur);
 	for (i = 1; i <= 48; i++)
 	{
 		hold = cur;
 		cur = cur + prv;
-		printf(", %d", cur);
+		printf(", %ld", cur);
 		prv = hold;
 	}
 	return (0);
