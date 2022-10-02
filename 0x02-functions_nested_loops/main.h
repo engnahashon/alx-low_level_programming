@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
+int fibonacci_98(void);
 int fibonacci_sum_even(void);
 int fibonacci_50(void);
 void multiples(void);
