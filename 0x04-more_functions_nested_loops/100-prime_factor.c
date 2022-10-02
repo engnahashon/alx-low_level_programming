@@ -18,8 +18,9 @@ int main(void)
 void prime_num(void)
 {
 	long int num = 612852475143;
-	long int i = 3, factor = 0;
+	long int i;
 
+/*
 	while (num != 1)
 	{
 		if (num % i == 0)
@@ -32,7 +33,13 @@ void prime_num(void)
 		else
 			factor++;
 	}
-	printf("%ld\n", factor);
+*/
+	for (i = 3; i < 782849; i = i + 2)
+	{
+		while ((num % i == 0) && (num != i))
+			num = num / i;
+	}
+	printf("%ld", num);
 
 }
 
