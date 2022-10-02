@@ -17,15 +17,15 @@ int main(void)
   */
 int fibonacci_98(void)
 {
-	long prv = 1, cur = 2, hold;
+	unsigned long prv = 1, cur = 2, hold;
 	int i;
 
-	printf("%ld, %ld", prv, cur);
+	printf("%lu, %lu", prv, cur);
 	for (i = 1; i <= 96; i++)
 	{
 		hold = cur;
 		cur = cur + prv;
-		printf(", %ld", cur);
+		printf(", %lu", cur);
 		prv = hold;
 	}
 	return (0);
