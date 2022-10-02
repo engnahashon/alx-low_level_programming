@@ -24,7 +24,7 @@ int fibonacci_sum_even(void)
 	{
 		hold = cur;
 		cur = cur + prv;
-		if (cur % 2 == 0)
+		if (cur % 2 == 0 && cur < 4000000)
 			sum = sum + cur;
 		prv = hold;
 	}
