@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
+void print_number(int n);
 void prime_num(void);
 void print_triangle(int size);
 void fizzbuzz(void);

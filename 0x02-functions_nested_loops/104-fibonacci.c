@@ -17,7 +17,7 @@ int main(void)
   */
 int fibonacci_98(void)
 {
-	unsigned long prv = 1, cur = 2, hold;
+	unsigned long int prv = 1, cur = 2, hold;
 	int i;
 
 	printf("%lu, %lu", prv, cur);
@@ -25,7 +25,7 @@ int fibonacci_98(void)
 	{
 		hold = cur;
 		cur = cur + prv;
-		printf(", %lu", cur);
+		printf(" ,%lu", cur);
 		prv = hold;
 	}
 	return (0);
