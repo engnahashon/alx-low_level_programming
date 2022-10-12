@@ -2,8 +2,8 @@
 /**
   * main - prints the minimum number of coins to make
   * change for an amount of money
-  * argc: arg count
-  * argv: arg vector
+  * @argc: arg count
+  * @argv: arg vector
   *
   * Return: zero on success, 1 on Error
   */
@@ -28,11 +28,11 @@ int main(int argc, char *argv[])
 		{
 			if (mon >= 25)
 			{
-				coins = mon/25;
+				coins = mon / 25;
 				mon = mon % 25;
 
 			}
-			else if(mon >= 20)
+			else if (mon >= 20)
 			{
 				coins = coins + mon / 10;
 				mon = mon % 10;
@@ -59,3 +59,4 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
+
