@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		mon = atoi(argv[1]);
 		if (mon < 0)
 		{
-			printf("Error\n");
+			printf("0\n");
 			return (1);
 		}
 		while (mon != 0)
