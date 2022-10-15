@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 /**
   * print_strings - prints strings
-  * @sperator: string to be printed btn strings
+  * @separator: string to be printed btn strings
   * @n: number of strings
   */
 void print_strings(const char *separator, const unsigned int n, ...)
