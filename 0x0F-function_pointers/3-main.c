@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return(98);
+		return (98);
 	}
 
 	a = atoi(argv[1]);
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	if (p == NULL)
 	{
 		printf("Error\n");
-		return(99);
+		return (99);
 	}
 	printf("%d\n", (*p)(a, b));
 	return (0);
