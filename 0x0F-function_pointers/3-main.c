@@ -6,7 +6,7 @@
   *
   * Return: zero on success.
   */
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	int a, b;
 	int (*p)(int, int);

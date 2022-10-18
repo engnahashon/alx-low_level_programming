@@ -77,6 +77,6 @@ int op_mod(int a, int b)
 		return (100);
 	}
 
-	mod = a + b;
+	mod = a % b;
 	return (mod);
 }
