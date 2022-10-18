@@ -5,7 +5,7 @@
   *
   * Return: int str len
   */
-int get_str_len (char *str)
+int get_str_len(char *str)
 {
 	int len = 0;
 
@@ -24,10 +24,10 @@ int get_str_len (char *str)
 void puts_half(char *str)
 {
 	int len, i;
-	
+
 	len = get_str_len(str);
 
-	for (i = (len / 2) + 1; i <= len; i++)
+	for (i = (len / 2); i <= len; i++)
 		_putchar(str[i]);
 	_putchar('\n');
 }
