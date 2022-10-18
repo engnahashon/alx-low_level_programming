@@ -16,7 +16,8 @@ int get_str_len(char *str)
 	}
 	return (len);
 }
-/** _strcpy - copies string
+/**
+  * _strcpy - copies string
   * @dest: destination
   * @src: src
   *
@@ -27,7 +28,7 @@ char *_strcpy(char *dest, char *src)
 	int len, i;
 
 	len = get_str_len(src);
-	for (i = 0; i < len; i++)
+	for (i = 0; i <= len; i++)
 	{
 		dest[i] = src[i];
 	}
