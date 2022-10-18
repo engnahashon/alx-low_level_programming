@@ -5,7 +5,7 @@
   *
   * Return: int str len
   */
-int get_str_len (char *str)
+int get_str_len(char *str)
 {
 	int len = 0;
 
