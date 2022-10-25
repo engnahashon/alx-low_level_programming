@@ -22,8 +22,8 @@ int main(void)
 							        printf("Error\n");
 								        return (1);
 									    }
-				        new->str = strdup("Hello");
-					    new->len = 5;
+				        new->str = strdup("Hellos");
+					    new->len = 6;
 					        new->next = head;
 						    head = new;
 						        n = print_list(head);
