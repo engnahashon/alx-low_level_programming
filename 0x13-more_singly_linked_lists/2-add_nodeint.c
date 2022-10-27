@@ -2,7 +2,7 @@
 /**
   * add_nodeint - adds a new at the beginning of a list
   * @head: linked list
-  * @h: integer to be added
+  * @n: integer to be added
   *
   * Return: address of the new element
   */
