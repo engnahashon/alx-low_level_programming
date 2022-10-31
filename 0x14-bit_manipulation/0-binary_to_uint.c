@@ -15,7 +15,7 @@ unsigned int _pow(unsigned int a, unsigned int b)
 	if (b == 1)
 		return (a * 1);
 	else
-		return (a * _pow (a, b - 1));
+		return (a * _pow(a, b - 1));
 }
 
 /**
@@ -52,7 +52,7 @@ unsigned int binary_to_uint(const char *b)
 	for (i = 0; i < len; i++)
 	{
 		if (b[i] - '0' == 0 || b[i] - '0' == 1)
-			dec = dec + _pow(2, (len - i - 1)) * (b[i]- '0');
+			dec = dec + _pow(2, (len - i - 1)) * (b[i] - '0');
 		else
 			return (0);
 
