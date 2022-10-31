@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * prints binary represensation of a number
+  * print_binary - prints binary represensation of a number
   * @n: integer
   */
 void print_binary(unsigned long int n)
