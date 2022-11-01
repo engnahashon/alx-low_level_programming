@@ -6,7 +6,15 @@
   */
 void print_binary(unsigned long int n)
 {
-	unsigned long int i = 32, mask;
+	unsigned long int i, mask, count = 0, tmp;
+
+	tmp = n;
+	while (tmp > 0)
+	{
+		tmp = tmp >> 1;
+		count++;
+	}
+	i = count + 1;
 
 	while (i >= 1)
 	{
