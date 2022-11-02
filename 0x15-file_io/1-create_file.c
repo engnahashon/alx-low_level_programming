@@ -36,11 +36,17 @@ int create_file(const char *filename, char *text_content)
 	}
 	op = open(filename, O_WRONLY | O_CREAT | O_TRUNC);
 	if (op == -1)
+	{
+		close(op)
 		return (-1);
-
+	}
 	wr = write(op, text_content, len);
 	if (wr == -1)
+	{
+		close(op);
 		return (-1);
+	}
 	return (1);
+	close (op);
 
 }
