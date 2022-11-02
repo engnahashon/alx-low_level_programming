@@ -20,7 +20,7 @@ int get_len(char *str)
 /**
   * append_text_to_file - appends text at the end of a file.
   * @filename: filename
-  * @text_content
+  * @text_content: string
   *
   * Return: 1 on success and -1 on failure
   */
@@ -35,7 +35,6 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (op == -1)
 		return (-1);
 	wr = write(op, text_content, len);
-	printf("Write: %d\n", wr);
 	if (wr == -1)
 		return (-1);
 	close(op);
