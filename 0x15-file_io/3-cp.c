@@ -8,7 +8,7 @@
   */
 int main(int argc, char *argv[])
 {
-	int op, rd, wr, cl, count = 1024;
+	int op, rd, wr, cl, count = 8192;
 	char *buf;
 
 	buf = malloc(count);
@@ -27,23 +27,21 @@ int main(int argc, char *argv[])
 	cl = close(op);
 	if (cl == -1)
 	{
-		dprintf(2, "Error: Can't close %d\n", op);
+		dprintf(2, "Error: Can't close fd %d\n", op);
 		exit(100);
 	}
 	op = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	wr = write(op, buf, count);
 	if (wr == -1)
 	{
-		dprintf(2, "Error: Can't write to file %s\n", argv[2]);
-		free(buf);
+		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	free(buf);
 	cl = close(op);
 	if (cl == -1)
 	{
-		dprintf(2, "Error: Can't close %d\n", op);
-		free(buf);
+		dprintf(2, "Error: Can't close fd %d\n", op);
 		exit(100);
 	}
 	return (0);
