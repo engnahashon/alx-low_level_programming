@@ -18,13 +18,8 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	op = open(argv[1], O_RDONLY);
-	if (op == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
 	rd = read(op, buf, count);
-	if (rd == -1)
+	if (rd == -1 || op == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
