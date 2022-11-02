@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		printf("Usage: cp file_from file_to\n");
+		dprintf(2, "Usage: cp file_from file_to\n");
 		free(buf);
 		exit(97);
 	}
@@ -24,21 +24,21 @@ int main(int argc, char *argv[])
 	op = open(argv[1], O_RDONLY);
 	if (op == -1)
 	{
-		printf("Error: Can't read from file %s\n", argv[1]);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		free(buf);
 		exit(99);
 	}
 	rd = read(op, buf, count);
 	if (rd == -1)
 	{
-		printf("Error: Can't read from file %s\n", argv[1]);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		free(buf);
 		exit(99);
 	}
 	cl = close(op);
 	if (cl == -1)
 	{
-		printf("Error: Can't close %d\n", op);
+		dprintf(2, "Error: Can't close %d\n", op);
 		free(buf);
 		exit(100);
 	}
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 	wr = write(op, buf, count);
 	if (wr == -1)
 	{
-		printf("Error: Can't write to file %s\n", argv[2]);
+		dprintf(2, "Error: Can't write to file %s\n", argv[2]);
 		free(buf);
 		exit(99);
 	}
@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 	cl = close(op);
 	if (cl == -1)
 	{
-		printf("Error: Can't close %d\n", op);
+		dprintf(2, "Error: Can't close %d\n", op);
 		free(buf);
 		exit(100);
 	}
