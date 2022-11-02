@@ -8,41 +8,34 @@
   */
 int main(int argc, char *argv[])
 {
-	int op, rd, wr, cl;
+	int op, rd, wr, cl, count = 1024;
 	char *buf;
-	int count = 1024;
 
 	buf = malloc(count);
-
 	if (argc != 3)
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
-		free(buf);
 		exit(97);
 	}
-
 	op = open(argv[1], O_RDONLY);
 	if (op == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		free(buf);
-		exit(99);
+		exit(98);
 	}
 	rd = read(op, buf, count);
 	if (rd == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		free(buf);
-		exit(99);
+		exit(98);
 	}
 	cl = close(op);
 	if (cl == -1)
 	{
 		dprintf(2, "Error: Can't close %d\n", op);
-		free(buf);
 		exit(100);
 	}
-	op = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	op = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	wr = write(op, buf, count);
 	if (wr == -1)
 	{
@@ -58,6 +51,5 @@ int main(int argc, char *argv[])
 		free(buf);
 		exit(100);
 	}
-	
 	return (0);
 }
