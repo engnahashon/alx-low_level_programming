@@ -1,4 +1,5 @@
 #include "search_algos.h"
+
 /**
   * binary_search - searches for a value in a sorted array of integers
   * using the Binary search algorithm
@@ -17,10 +18,11 @@ int binary_search(int *array, size_t size, int value)
 
 	if (!array)
 		return (-1);
-	
+
 	while (L <= R)
 	{
-		int m = floor((L+R)/2);
+		int m = floor((L + R) / 2);
+
 		if (array[m] < value)
 			L = m + 1;
 		else if (array[m] > value)
